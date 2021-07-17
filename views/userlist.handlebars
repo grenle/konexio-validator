@@ -1,0 +1,24 @@
+<h1>User List</h1>
+<p>You can also <a href="/users/add">add a user</a></p>
+<table id="userlist">
+    <thead>
+        <tr>
+            <th>username</th>
+            <th>email</th>
+            <th>age</th>
+            <th>town</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td><a href="users/{{this.username}}">{{this.username}}</a></td>
+            <td>{{this.email}}</td>
+            <td>{{this.age}}</td>
+            <td>{{this.town}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<ol>
+</ol>

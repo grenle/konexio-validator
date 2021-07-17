@@ -1,0 +1,63 @@
+body{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userlist, #userlist th, #userlist td{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid lightgrey;
+}
+
+#userlist th{
+    background-color: grey;
+    color: white;
+}
+
+#userlist tr:nth-child(even){
+    background-color: #c0ffff;
+}
+
+#userlist th, #userlist td{
+    white-space: nowrap;
+    padding: 10px;
+}
+
+#useradd{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#useradd label{
+    margin-bottom: 10px;
+}
+
+#useradd input[type=text],
+#useradd input[type=email],
+#useradd select{
+    font-size: inherit;
+    padding: 6px;
+    margin-bottom: 16px;
+    flex-basis: 78%;
+}
+
+#useradd input[type=submit]{
+    font-size: inherit;
+    padding: 6px;
+}
+
+#useradd input[type=text],
+#useradd input[type=email]{
+    border: 1px solid lightgrey;
+}
+
+.fielderror{
+    border: 1px solid red!important;
+    background-color: #fff0f0;
+}
+
+.ermsg{
+    color: red;
+}

@@ -1,0 +1,38 @@
+<h1>Add a user</h1>
+<form id="useradd" method="POST" action="/users/">
+    <label for="username">Username:</label>
+    <input type="text"
+        id="username"
+        {{#if username.error}}class="fielderror"{{/if}}
+        name="username" value="{{username.value}}">
+    {{#if username.error}}
+    <p class="ermsg">{{username.ermsg}}</p>
+    {{/if}}
+    <label for="email">Email:</label>
+    <input
+        type="email"
+        id="email"
+        {{#if email.error}}class="fielderror"{{/if}}
+        name="email" 
+        value={{email.value}}>
+    {{#if email.error}}
+    <p class="ermsg">{{email.ermsg}}</p>
+    {{/if}}
+    <label for="age">Age:</label>
+    <input
+        type="text"
+        id="age"
+        {{#if age.error}}class="fielderror"{{/if}}
+        name="age"
+        value={{age.value}}>
+    {{#if age.error}}
+    <p class="ermsg">{{age.ermsg}}</p>
+    {{/if}}
+    <label for="town">Town</label>
+    <select name="town" id="town">
+        {{#each towns}} 
+        <option {{#if this.selected}}selected{{/if}} value="{{this.name}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+    <input type="submit" value="create user">
+</form>
